@@ -28,6 +28,7 @@ def get_orders_with_null_comments():
     """
     cursor.execute(query)
     result = cursor.fetchall()
+    print(result)
     cursor.close()
     connection.close()
     return {"result": result}
@@ -42,6 +43,7 @@ def get_first_5_customers():
     """
     cursor.execute(query)
     result = cursor.fetchall()
+    print(result)
     cursor.close()
     connection.close()
     return {"result": result}
@@ -60,6 +62,7 @@ def get_payments_total_and_average():
     """
     cursor.execute(query)
     result = cursor.fetchall()
+    print(result)
     cursor.close()
     connection.close()
     return {"result": result}
@@ -74,6 +77,7 @@ def get_employees_with_office_phone():
     """
     cursor.execute(query)
     result = cursor.fetchall()
+    print(result)
     cursor.close()
     connection.close()
     return {"result": result}
@@ -88,6 +92,7 @@ def get_customers_with_shipping_dates():
     """
     cursor.execute(query)
     result = cursor.fetchall()
+    print(result)
     cursor.close()
     connection.close()
     return {"result": result}
@@ -104,6 +109,7 @@ def get_customer_quantity_per_order():
     """
     cursor.execute(query)
     result = cursor.fetchall()
+    print(result)
     cursor.close()
     connection.close()
     return {"result": result}
@@ -124,6 +130,7 @@ def get_customers_payments_by_lastname_pattern(pattern: str = "son"):
     """
     cursor.execute(query)
     result = cursor.fetchall()
+    print(result)
     cursor.close()
     connection.close()
     return {"result": result}
