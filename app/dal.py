@@ -1,7 +1,7 @@
 from typing import List, Dict, Any
 from db import get_db_connection
 
-def get_customers_by_credit_limit_range(cursor):
+def get_customers_by_credit_limit_range():
     """Return customers with credit limits outside the normal range."""
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
@@ -17,7 +17,7 @@ def get_customers_by_credit_limit_range(cursor):
     connection.close()
     return {"result": result}
 
-def get_orders_with_null_comments(cursor):
+def get_orders_with_null_comments():
     """Return orders that have null comments."""
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
@@ -32,7 +32,7 @@ def get_orders_with_null_comments(cursor):
     connection.close()
     return {"result": result}
 
-def get_first_5_customers(cursor):
+def get_first_5_customers():
     """Return the first 5 customers."""
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
@@ -46,7 +46,7 @@ def get_first_5_customers(cursor):
     connection.close()
     return {"result": result}
 
-def get_payments_total_and_average(cursor):
+def get_payments_total_and_average():
     """Return total and average payment amounts."""
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
@@ -64,7 +64,7 @@ def get_payments_total_and_average(cursor):
     connection.close()
     return {"result": result}
 
-def get_employees_with_office_phone(cursor):
+def get_employees_with_office_phone():
     """Return employees with their office phone numbers."""
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
@@ -78,7 +78,7 @@ def get_employees_with_office_phone(cursor):
     connection.close()
     return {"result": result}
 
-def get_customers_with_shipping_dates(cursor):
+def get_customers_with_shipping_dates():
     """Return customers with their order shipping dates."""
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
@@ -92,7 +92,7 @@ def get_customers_with_shipping_dates(cursor):
     connection.close()
     return {"result": result}
 
-def get_customer_quantity_per_order(cursor):
+def get_customer_quantity_per_order():
     """Return customer name and quantity for each order."""
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
@@ -109,7 +109,7 @@ def get_customer_quantity_per_order(cursor):
     return {"result": result}
 
 
-def get_customers_payments_by_lastname_pattern(cursor, pattern: str = "son"):
+def get_customers_payments_by_lastname_pattern(pattern: str = "son"):
     """Return customers and payments for last names matching pattern."""
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
